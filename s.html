@@ -7,19 +7,19 @@
 <body>
     <table>
         <tr>
-        <td> <input> </input> </td>
-        <td> </td>
-        <td> </td>
+        <td id="1"> <input type="button" class="classe" onclick="marcadora('1')"/> </td>
+        <td id="2"> <input type="button" class="classe" onclick="marcadora('2')"/> </td>
+        <td id="3"> <input type="button" class="classe" onclick="marcadora('3')"/> </td>
         </tr>
         <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
+        <td id="4"> <input type="button" class="classe" onclick="marcadora('4')"/> </td>
+        <td id="5"> <input type="button" class="classe" onclick="marcadora('5')"/> </td>
+        <td id="6"> <input type="button" class="classe" onclick="marcadora('6')"/> </td>
         </tr>
         <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
+        <td id="7"> <input type="button" class="classe" onclick="marcadora('7')"/> </td>
+        <td id="8"> <input type="button" class="classe" onclick="marcadora('8')"/> </td>
+        <td id="9"> <input type="button" class="classe" onclick="marcadora('9')"/> </td>
         </tr>
         </table>
 
@@ -28,14 +28,63 @@
                 border: 2px solid black;
                 width: 200px;
                 height: 200px;
-    
+                
             }
             table {
                 width: 600px;
                 background-color: rgb(255, 255, 255);
                 margin: auto;
             }
+            .classe {
+            background-color: red;
+            width: 100%;
+            height: 100%;
+            }
+            p {
+            font-size: 100px;
+            margin: 0; 
+            padding: 0;
+            text-align: center;
+            }
             
         </style>
+
+        <script> 
+            var contador = 0
+            var marcador = "O"
+            
+            function marcadora(n){
+                if(contador%2==0){
+                    marcador='O';
+                }
+                else {
+                    marcador='X';
+                }
+                let variavel=document.getElementById(n)
+                variavel.innerHTML = `<p>${marcador}</p>`
+                contador ++
+            }
+                
+        </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
