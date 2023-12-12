@@ -34,9 +34,10 @@
                 width: 600px;
                 background-color: rgb(255, 255, 255);
                 margin: auto;
+                border-collapse: collapse;
             }
             .classe {
-            background-color: red;
+            background-color: white;
             width: 100%;
             height: 100%;
             }
@@ -52,7 +53,8 @@
         <script> 
             var contador = 0
             var marcador = "O"
-            
+            var casas=[' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
+
             function marcadora(n){
                 if(contador%2==0){
                     marcador='O';
@@ -60,13 +62,36 @@
                 else {
                     marcador='X';
                 }
+                casas[n]=marcador
                 let variavel=document.getElementById(n)
                 variavel.innerHTML = `<p>${marcador}</p>`
                 contador ++
+                console.log (contador)
+                validaOfim()
             }
             function validaOfim(){
-            
+                
+                let linha_1 = casas[1] == casas[2] && casas[2] == casas[3] && casas[3]!=' '
+                let linha_2 = casas[4] == casas[5] && casas[5] == casas[6] && casas[6]!=' '
+                let linha_3 = casas[7] == casas[8] && casas[8] == casas[9] && casas[9]!=' '
+
+                let coluna_1 = casas[1] == casas[4] && casas[4] == casas[7] && casas[7]!=' '
+                let coluna_2 = casas[2] == casas[5] && casas[5] == casas[8] && casas[8]!=' '
+                let coluna_3 = casas[3] == casas[6] && casas[6] == casas[9] && casas[9]!=' '
+
+                let diagonal_1 = casas[1] == casas[5] && casas[5] == casas[9] && casas[9]!=' '
+                let diagonal_2 = casas[3] == casas[5] && casas[5] == casas[7] && casas[7]!=' '
+
+                let valida_combinacoes=linha_1||linha_2||linha_3||coluna_1||coluna_2||coluna_3||diagonal_1||diagonal_2
+                
+                if (valida_combinacoes) {
+                    alert(`O vencedor é o ${marcador}`)}
+                else if (contador == 9){ 
+                    alert(`Deu vovó`)}
+                
+                
             }
+                
         </script>
 </body>
 </html>
