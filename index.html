@@ -48,11 +48,12 @@
               <button class="reset-btn">
                   <span class="reset"> Resetar </span>
                   <span class="new-game"> novo jogo</span>
+                  <button oneclick="window.location.reload()"
+                  style="cursor: pointer;"> Resetar jogo</button>
               </button>
-        
-              
-            
           </footer>
+
+        
 
         <style>
 
@@ -158,7 +159,6 @@
                     alert(`THE WINNER WAS ${marcador}`)}
                 else if (contador == 9){ 
                     alert(`DEU VOVÓ!!!!`)}
-            
                 
             }
 
