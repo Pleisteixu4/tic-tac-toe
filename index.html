@@ -2,9 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title> Tic-Tac-Toe </title>
 </head>
 <body>
+
+    <h1>
+        <div class="logo">∞</div>
+        <span class="adjective"> Harobed Retsiemfoh <sup class="asterisk">*</sup></span>
+          <span> &#8921; Tic-Tac-Toe &#8920; </span>
+        <small> (2 players) </small>
+      </h1>
+
+      
     <table>
         <tr>
         <td id="1"> <input type="button" class="classe" onclick="marcadora('1')"/> </td>
@@ -23,24 +32,84 @@
         </tr>
         </table>
 
+        <footer>
+  
+            <div class="game-status">
+              <div class="turn">
+                <span class="player-1"><b>⨯</b> <strong>PLAYER&thinsp;1</strong>'s turn</span>
+                <span class="player-2"><i>⭘</i> <strong>PLAYER&thinsp;2</strong>'s turn</span>
+              </div>
+              <div>
+                <span class="win player-2 rubberband"><strong>🎉 PLAYER&thinsp;1 wins!</strong></span>
+                <span class="win player-1 rubberband"><strong>🎉 PLAYER&thinsp;2 wins!</strong></span>
+              </div>
+            
+            
+              <button class="reset-btn">
+                  <span class="reset"> Resetar </span>
+                  <span class="new-game"> novo jogo</span>
+              </button>
+        
+              
+            
+          </footer>
+
         <style>
+
+            h1 {
+                --player-1-clr: light-dark( oklch(0.5 0.15 200 / 1), oklch(0.7 0.07 200 / 1) );
+	            --player-2-clr: light-dark( oklch(0.75 0.20 20 / 1), oklch(0.7 0.15 20 / 1) );
+                --player-clr: var(--player-1-clr);
+	            font-family: inherit;
+	            text-align: center;
+	            margin-block: 0;
+	            padding-block: 0;
+	            opacity: .6;
+	            display: grid;
+                gap: .2rem;
+	            position: relative;
+                color: light-dark(#000, #ccc);
+            } 
+            h1 sup {
+                color: light-dark(#333, #ccc);
+                font-size: 1.2rem;
+                font-weight: normal;
+                display: inline-block;
+                display: block;
+                font-family: "Georgia";
+                position: absolute;
+                right: -1ch;
+                top: 0;
+                user-select: none;
+            }
+
+            h1 small {
+                font-size: .5em;
+                font-weight: normal;
+                color: #888888;
+                color: light-dark(#555, #777);
+            }
+
             table td {
                 border: 2px solid black;
                 width: 200px;
                 height: 200px;
                 
             }
+
             table {
                 width: 600px;
                 background-color: rgb(255, 255, 255);
                 margin: auto;
                 border-collapse: collapse;
             }
+
             .classe {
                 background-color: white;
                 width: 100%;
                 height: 100%;
             }
+
             p {
                 font-family: fantasy;
                 font-size: 100px;
@@ -89,9 +158,11 @@
                     alert(`THE WINNER WAS ${marcador}`)}
                 else if (contador == 9){ 
                     alert(`DEU VOVÓ!!!!`)}
-                
+            
                 
             }
+
+        
                 
         </script>
 </body>
