@@ -7,12 +7,12 @@
 <body>
 
     <h1>
-        <div class="logo">∞</div>
+        <div class="logo"> ♕ </div>
         <span class="adjective"> Harobed Retsiemfoh <sup class="asterisk">*</sup></span>
           <span> &#8921; Tic-Tac-Toe &#8920; </span>
-        <small> (2 players) </small>
       </h1>
 
+      <h6> AAAA </h6>
       
     <table>
         <tr>
@@ -33,17 +33,14 @@
         </table>
 
         <footer>
-  
+            <h6> AAAA </h6>
+
             <div class="game-status">
               <div class="turn">
                 <span class="player-1"><b>⨯</b> <strong>PLAYER&thinsp;1</strong>'s turn</span>
                 <span class="player-2"><i>⭘</i> <strong>PLAYER&thinsp;2</strong>'s turn</span>
               </div>
-              <div>
-                <span class="win player-2 rubberband"><strong>🎉 PLAYER&thinsp;1 wins!</strong></span>
-                <span class="win player-1 rubberband"><strong>🎉 PLAYER&thinsp;2 wins!</strong></span>
-              </div>
-            
+
             
               <a href="index.html" button class="reset-btn">
                   <span class="reset"> Resetar </span>
@@ -55,6 +52,20 @@
         
 
         <style>
+
+            h6 {
+                color:#777;
+                font-size: 05px;
+            }
+            .game-status {
+                text-align: center;
+            }
+            .turn {
+                text-align: center;
+            }
+            body {
+                background-color: #777;
+            }
 
             h1 {
                 --player-1-clr: light-dark( oklch(0.5 0.15 200 / 1), oklch(0.7 0.07 200 / 1) );
@@ -68,7 +79,7 @@
 	            display: grid;
                 gap: .2rem;
 	            position: relative;
-                color: light-dark(#000, #ccc);
+                color: light-dark(#000000, #000000);
             } 
             h1 sup {
                 color: light-dark(#333, #ccc);
